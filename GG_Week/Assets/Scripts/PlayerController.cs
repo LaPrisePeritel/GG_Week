@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.Q))
             downKey = true;
         else
             downKey = false;
@@ -48,11 +48,6 @@ public class PlayerController : MonoBehaviour
             upKey = true;
         else
             upKey = false;
-
-        if (Input.GetKey(KeyCode.Q))
-            middleKey = true;
-        else
-            middleKey = false;
 
         if (isInThisPart && Input.GetKey(KeyCode.Space))
         {
@@ -70,6 +65,9 @@ public class PlayerController : MonoBehaviour
         if (isInThisPart && downKey)
             levelPart.transform.position += partMovementDown * movingSpeedDown * Time.deltaTime;
     }
+
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

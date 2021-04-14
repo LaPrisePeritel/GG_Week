@@ -21,8 +21,8 @@ public class LevelGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Vector3.Distance(player.transform.position, lastEndPosition) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
-            SpawnLevelPart();*/
+        if (Vector3.Distance(player.transform.position, lastEndPosition) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
+            SpawnLevelPart();
     }
 
     private void SpawnLevelPart()
