@@ -7,7 +7,6 @@ TagManager:
   - LevelPart
   - Trap
   - MovingPlatform
-  - Momie
   layers:
   - Default
   - TransparentFX
@@ -19,7 +18,7 @@ TagManager:
   - 
   - Momie
   - Player
-  - 
+  - Stop_Momie
   - 
   - 
   - 

@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Is Player On Block")]
     public bool isInThisPart = false;
-    
 
     [Header("Ground Blocks")]
     public GameObject levelPart;
@@ -49,10 +48,7 @@ public class PlayerController : MonoBehaviour
         else
             upKey = false;
 
-        if (isInThisPart && Input.GetKey(KeyCode.Space))
-        {
-            movingPlatform.transform.position += Vector3.right * movingPlatformSpeed * Time.deltaTime;
-        }
+        
     }
 
     private void FixedUpdate()
@@ -66,29 +62,12 @@ public class PlayerController : MonoBehaviour
             levelPart.transform.position += partMovementDown * movingSpeedDown * Time.deltaTime;
     }
 
-
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("LevelPart"))
         {
             levelPart = collision.gameObject;
             isInThisPart = true;
-        }
-
-        if (collision.gameObject.CompareTag("MovingPlatform"))
-        {
-            movingPlatform = collision.gameObject;
-            isInThisPart = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("MovingPlatform"))
-        {
-            isInThisPart = false;
         }
     }
 }
