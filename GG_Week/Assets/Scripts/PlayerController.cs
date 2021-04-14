@@ -14,25 +14,26 @@ public class PlayerController : MonoBehaviour
     public float movingSpeedUp = 1;
     public float movingSpeedDown = 1;
 
-    [Header("Moving Platform")]
-    private GameObject movingPlatform;
-    public float movingPlatformSpeed = 2f;
-
     [Header("Keys")]
     public bool downKey = false;
     public bool upKey = false;
-    public bool middleKey = false;
 
     [Header("Player")]
     public float moveSpeed = 3f;
     public Rigidbody2D rb;
     Vector2 playerMovement;
 
+    [Header("Player Life")]
+    public float currentHealth;
+    public float maxHealth = 100f;
+
     void Start()
     {
         playerMovement = Vector2.right;
         partMovementUp = Vector3.up;
         partMovementDown = Vector3.down;
+
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -48,7 +49,20 @@ public class PlayerController : MonoBehaviour
         else
             upKey = false;
 
-        
+        if (currentHealth >= maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+    }
+
+    public void HealUp(int healUp)
+    {
+        currentHealth += healUp;
     }
 
     private void FixedUpdate()
