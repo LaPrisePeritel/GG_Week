@@ -8517,7 +8517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202531973717412373, guid: 366ebf07ec1f8464287ca0cd7a94790e, type: 3}
       propertyPath: trapState
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7604518580329141066, guid: 366ebf07ec1f8464287ca0cd7a94790e, type: 3}
       propertyPath: m_Name
