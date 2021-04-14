@@ -14,7 +14,7 @@ public class Momie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boxCollider = GetComponentInChildren<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame

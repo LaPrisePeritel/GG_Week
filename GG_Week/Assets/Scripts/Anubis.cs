@@ -8,27 +8,24 @@ public class Anubis : MonoBehaviour
     public PlayerController playerController;
     private Vector3 playerPos;
 
-    public bool isAnubisOutOfScreen = true;
-
     public float anubisMoveSpeed = 2f;
     public float slowAnubisMoveSpeed = 1f;
     public int anubisDamage = 10;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         playerPos = player.transform.position;
+        transform.position = Vector3.MoveTowards(transform.position, playerPos, anubisMoveSpeed * Time.deltaTime);
 
-        if (isAnubisOutOfScreen)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, playerPos, anubisMoveSpeed * Time.deltaTime);
-        }
-
+        if (!GetComponent<Renderer>().isVisible)
+            anubisMoveSpeed = playerController.moveSpeed;
+        else
+            anubisMoveSpeed = 1f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,7 +35,7 @@ public class Anubis : MonoBehaviour
             // Animation d'attaque
             playerController.TakeDamage(anubisDamage);
 
-
+            anubisMoveSpeed = -1f;
         }
     }
 }
