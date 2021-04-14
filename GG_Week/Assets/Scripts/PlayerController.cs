@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Is Player On Block")]
     public bool isInThisPart = false;
-    
 
     [Header("Ground Blocks")]
     public GameObject levelPart;
@@ -15,25 +14,26 @@ public class PlayerController : MonoBehaviour
     public float movingSpeedUp = 1;
     public float movingSpeedDown = 1;
 
-    [Header("Moving Platform")]
-    private GameObject movingPlatform;
-    public float movingPlatformSpeed = 2f;
-
     [Header("Keys")]
     public bool downKey = false;
     public bool upKey = false;
-    public bool middleKey = false;
 
     [Header("Player")]
     public float moveSpeed = 3f;
     public Rigidbody2D rb;
     Vector2 playerMovement;
 
+    [Header("Player Life")]
+    public float currentHealth;
+    public float maxHealth = 100f;
+
     void Start()
     {
         playerMovement = Vector2.right;
         partMovementUp = Vector3.up;
         partMovementDown = Vector3.down;
+
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -49,10 +49,20 @@ public class PlayerController : MonoBehaviour
         else
             upKey = false;
 
-        if (isInThisPart && Input.GetKey(KeyCode.Space))
+        if (currentHealth >= maxHealth)
         {
-            movingPlatform.transform.position += Vector3.right * movingPlatformSpeed * Time.deltaTime;
+            currentHealth = maxHealth;
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+    }
+
+    public void HealUp(int healUp)
+    {
+        currentHealth += healUp;
     }
 
     private void FixedUpdate()
@@ -66,29 +76,12 @@ public class PlayerController : MonoBehaviour
             levelPart.transform.position += partMovementDown * movingSpeedDown * Time.deltaTime;
     }
 
-
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("LevelPart"))
         {
             levelPart = collision.gameObject;
             isInThisPart = true;
-        }
-
-        if (collision.gameObject.CompareTag("MovingPlatform"))
-        {
-            movingPlatform = collision.gameObject;
-            isInThisPart = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("MovingPlatform"))
-        {
-            isInThisPart = false;
         }
     }
 }

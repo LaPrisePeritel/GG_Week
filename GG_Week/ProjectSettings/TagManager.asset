@@ -7,7 +7,7 @@ TagManager:
   - LevelPart
   - Trap
   - MovingPlatform
-  - Momie
+  - Anubis
   layers:
   - Default
   - TransparentFX
@@ -19,7 +19,7 @@ TagManager:
   - 
   - Momie
   - Player
-  - 
+  - Stop_Momie
   - 
   - 
   - 
