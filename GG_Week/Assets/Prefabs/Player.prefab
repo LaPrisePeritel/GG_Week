@@ -51,12 +51,13 @@ MonoBehaviour:
   levelPart: {fileID: 0}
   movingSpeedUp: 1
   movingSpeedDown: 1
-  movingPlatformSpeed: 2
   downKey: 0
   upKey: 0
-  middleKey: 0
-  moveSpeed: 3
+  moveSpeed: 2
   rb: {fileID: 3579347917862270669}
+  animator: {fileID: 6770415838980216018}
+  currentHealth: 0
+  maxHealth: 100
 --- !u!212 &1488359795475954978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -97,7 +98,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -8269643939208547690, guid: 0bec515aee1d8ed47a4248b7312921a7, type: 3}
+  m_Sprite: {fileID: 5733598125829463625, guid: e690363569d5deb49b1fd8df634cc6ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,7 +119,7 @@ Animator:
   m_GameObject: {fileID: 6727652804612819642}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 642ce409bc6033c4388b81350e943341, type: 2}
+  m_Controller: {fileID: 9100000, guid: 79023bfa0e987f54d87547bf29c6e12a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

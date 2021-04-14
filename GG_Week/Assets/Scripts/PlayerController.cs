@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 3f;
     public Rigidbody2D rb;
     Vector2 playerMovement;
+    public Animator animator;
 
     [Header("Player Life")]
     public float currentHealth;
@@ -39,6 +40,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("Speed", rb.velocity.sqrMagnitude);
+
         if (Input.GetKey(KeyCode.Q))
             downKey = true;
         else
