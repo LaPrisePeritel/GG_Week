@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/LD_Louis.unity
+- path: Assets/Scenes/GP_Jul.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

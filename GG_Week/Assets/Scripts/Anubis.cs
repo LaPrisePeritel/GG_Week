@@ -9,7 +9,6 @@ public class Anubis : MonoBehaviour
     private Vector3 playerPos;
 
     public float anubisMoveSpeed = 2f;
-    public float slowAnubisMoveSpeed = 1f;
     public int anubisDamage = 10;
     // Start is called before the first frame update
     void Start()
@@ -34,8 +33,6 @@ public class Anubis : MonoBehaviour
         {
             // Animation d'attaque
             playerController.TakeDamage(anubisDamage);
-
-            anubisMoveSpeed = -1f;
         }
     }
 }
