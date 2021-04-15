@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6727652804612819642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.76, y: -1.569, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,11 +56,11 @@ MonoBehaviour:
   upKey: 0
   panelHUD: {fileID: 0}
   panelDef: {fileID: 0}
-  moveSpeed: 2
+  moveSpeed: 2.5
   rb: {fileID: 3579347917862270669}
   spriteRenderer: {fileID: 1488359795475954978}
   animator: {fileID: 6770415838980216018}
-  speedPercent: 1
+  speedPercent: 0.37
   currentHealth: 0
   maxHealth: 50
   deathAnim: {fileID: 7666098894873025222, guid: 84aa275860d33ef4789388b513cf6f48, type: 3}
@@ -70,16 +70,16 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 2
-      inSlope: 0.002
-      outSlope: 0.002
+      value: 2.5
+      inSlope: 0.0029999996
+      outSlope: 0.0029999996
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 250
-      value: 2.5
+      time: 100
+      value: 2.8
       inSlope: Infinity
       outSlope: Infinity
       tangentMode: 103
@@ -87,7 +87,7 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 500
+      time: 150
       value: 3
       inSlope: Infinity
       outSlope: Infinity
@@ -96,23 +96,59 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 750
-      value: 3.5
+      time: 200
+      value: 3.2
+      inSlope: 0.004000001
+      outSlope: 0.004000001
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 250
+      value: 3.4
       inSlope: Infinity
       outSlope: Infinity
-      tangentMode: 1
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 300
+      value: 3.6
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 350
+      value: 3.8
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 400
+      value: 4
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1000
-      value: 4
-      inSlope: 0.002
-      outSlope: 0.002
-      tangentMode: 34
+      value: 6
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
