@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6770415838980216018}
   - component: {fileID: 3579347917862270669}
   - component: {fileID: 7241271564507290822}
+  - component: {fileID: 289898105919482389}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -53,11 +54,70 @@ MonoBehaviour:
   movingSpeedDown: 1
   downKey: 0
   upKey: 0
+  panelHUD: {fileID: 0}
+  panelDef: {fileID: 0}
   moveSpeed: 2
   rb: {fileID: 3579347917862270669}
+  spriteRenderer: {fileID: 1488359795475954978}
   animator: {fileID: 6770415838980216018}
+  speedPercent: 1
   currentHealth: 0
-  maxHealth: 100
+  maxHealth: 50
+  deathAnim: {fileID: 7666098894873025222, guid: 84aa275860d33ef4789388b513cf6f48, type: 3}
+  healthBar: {fileID: 0}
+  speedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 2
+      inSlope: 0.002
+      outSlope: 0.002
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 250
+      value: 2.5
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 500
+      value: 3
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 750
+      value: 3.5
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1000
+      value: 4
+      inSlope: 0.002
+      outSlope: 0.002
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  deathAnimTime: 2
+  doOnce: 0
 --- !u!212 &1488359795475954978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -144,7 +204,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9b2cf53dd51212b4aa3346110a7ffb06, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -165,3 +225,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.42
+--- !u!114 &289898105919482389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727652804612819642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54fc43260a50dab4687ec13c04792559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstep: {fileID: 8300000, guid: e4938f170241cae4887ed6fc56657554, type: 3}
+  tombeau: {fileID: 0}
+  platform: {fileID: 0}
+  death: {fileID: 8300000, guid: f6d71238b7e5a0d4e992ff0b34ee29cb, type: 3}

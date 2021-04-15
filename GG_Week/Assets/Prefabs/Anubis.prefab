@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 939976719588452807}
   - component: {fileID: 3677691258690167549}
   - component: {fileID: 4443502431679271240}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Anubis
   m_TagString: Anubis
   m_Icon: {fileID: 0}
@@ -119,7 +119,6 @@ MonoBehaviour:
   player: {fileID: 0}
   playerController: {fileID: 0}
   anubisMoveSpeed: 2
-  slowAnubisMoveSpeed: 1
   anubisDamage: 10
 --- !u!58 &4443502431679271240
 CircleCollider2D:
@@ -131,9 +130,9 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.35

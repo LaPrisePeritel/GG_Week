@@ -9,7 +9,7 @@ public class Anubis : MonoBehaviour
     private Vector3 playerPos;
 
     public float anubisMoveSpeed = 2f;
-    public int anubisDamage = 10;
+    public int anubisDamage = 50;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,10 @@ public class Anubis : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null)
+        {
+            return;
+        }
         playerPos = player.transform.position;
         transform.position = Vector3.MoveTowards(transform.position, playerPos, anubisMoveSpeed * Time.deltaTime);
 

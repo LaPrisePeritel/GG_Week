@@ -7,6 +7,7 @@ public class Platform : MonoBehaviour
     public bool actionKey = false;
 
     public float movingTime = 0f;
+    public float speed = 0.1f;
 
     private Vector3 pos1, pos2;
 
@@ -29,12 +30,11 @@ public class Platform : MonoBehaviour
     {
         if (actionKey)
         {
-            movingTime += Time.fixedDeltaTime;
-            
+            movingTime +=  speed * Time.fixedDeltaTime;
         }
         else
         {
-            movingTime -= Time.fixedDeltaTime;
+            movingTime -= speed * Time.fixedDeltaTime;
         }
 
         movingTime = Mathf.Clamp(movingTime, 0f, 1f);
