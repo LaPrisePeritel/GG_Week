@@ -18,65 +18,110 @@ public class PlayerController : MonoBehaviour
     public bool downKey = false;
     public bool upKey = false;
 
+    [Header("HUD")]
+    public GameObject panelHUD;
+    public GameObject panelDef;
+
     [Header("Player")]
-    public float moveSpeed = 3f;
+    public float moveSpeed;
     public Rigidbody2D rb;
-    Vector2 playerMovement;
+    public SpriteRenderer spriteRenderer;
     public Animator animator;
+    Vector3 startPoint;
+    public float speedPercent;
 
     [Header("Player Life")]
-    public float currentHealth;
-    public float maxHealth = 100f;
+    public int currentHealth;
+    public int maxHealth = 50;
+    public GameObject deathAnim;
+    public HealthBar healthBar;
+
+    [Header("Speed")]
+    public AnimationCurve speedCurve;
+
+    public float deathAnimTime = 2f;
+    public bool doOnce;
+
+    private void Awake()
+    {
+        startPoint = transform.position;
+    }
 
     void Start()
     {
-        playerMovement = Vector2.right;
         partMovementUp = Vector3.up;
         partMovementDown = Vector3.down;
 
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
+        doOnce = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Animator
         animator.SetFloat("Speed", rb.velocity.sqrMagnitude);
 
-        if (Input.GetKey(KeyCode.Q))
+        // Input
+        if (Input.GetKey(KeyCode.DownArrow))
             downKey = true;
         else
             downKey = false;
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.UpArrow))
             upKey = true;
         else
             upKey = false;
 
+        
+
+        // Life
+        healthBar.SetHealth(currentHealth);
         if (currentHealth >= maxHealth)
         {
             currentHealth = maxHealth;
         }
-    }
 
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-    }
-
-    public void HealUp(int healUp)
-    {
-        currentHealth += healUp;
+        if (currentHealth <= 0)
+        {
+            if (doOnce)
+            {
+                Instantiate(deathAnim, transform.position, Quaternion.identity);
+                SoundController.Instance.MakeDeathSound();
+                GetComponent<SpriteRenderer>().enabled = false;
+                ScoreManager.instance.DeathScore();
+                doOnce = false;
+            }
+            deathAnimTime -= Time.deltaTime;
+            if (deathAnimTime <= 0)
+            {
+                Destroy(gameObject);
+                panelHUD.SetActive(false);
+                panelDef.SetActive(true);
+            }
+            
+        }
     }
 
     private void FixedUpdate()
     {
-        rb.position += playerMovement * (moveSpeed * Time.fixedDeltaTime);
+        float meters = transform.position.x - startPoint.x;
+        ScoreManager.instance.ChangeScore(meters);
+
+        float speed = speedCurve.Evaluate(meters);
+        moveSpeed = speed;
+
+        Vector2 velocity = rb.velocity;
+        velocity.x = speed;
+        rb.velocity = velocity;
 
         if (isInThisPart && upKey)
-            levelPart.transform.position += partMovementUp * movingSpeedUp * Time.deltaTime;
+            levelPart.transform.position += partMovementUp * (speedPercent * moveSpeed) * Time.deltaTime;
 
         if (isInThisPart && downKey)
-            levelPart.transform.position += partMovementDown * movingSpeedDown * Time.deltaTime;
+            levelPart.transform.position += partMovementDown * (speedPercent * moveSpeed) * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -86,5 +131,20 @@ public class PlayerController : MonoBehaviour
             levelPart = collision.gameObject;
             isInThisPart = true;
         }
+
+        if (collision.gameObject.CompareTag("DeathZone"))
+        {
+            currentHealth = 0;
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+    }
+
+    public void FootStepSound()
+    {
+        SoundController.Instance.MakeFootStepSound();
     }
 }
