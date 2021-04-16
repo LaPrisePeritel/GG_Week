@@ -1321,8 +1321,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionKey: 0
-  movingTime: 0
-  speed: 0.7
+  player: {fileID: 0}
+  playerSpeedPercent: 0.35
 --- !u!1 &3093144092763479337
 GameObject:
   m_ObjectHideFlags: 0

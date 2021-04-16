@@ -6,8 +6,14 @@ public class Platform : MonoBehaviour
 {
     public bool actionKey = false;
 
-    public float movingTime = 0f;
-    public float speed = 0.1f;
+    public PlayerController player;
+
+    private float movingTime = 0f;
+    private float speed = 0.1f;
+    
+    [Range(0f, 1f)]
+    public float playerSpeedPercent;
+    
 
     private Vector3 pos1, pos2;
 
@@ -15,6 +21,7 @@ public class Platform : MonoBehaviour
     {
         pos1 = transform.position;
         pos2 = new Vector3(pos1.x + 4, 0, 0);
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
 
@@ -24,6 +31,8 @@ public class Platform : MonoBehaviour
             actionKey = false;
         else if (!actionKey && Input.GetKeyDown(KeyCode.Space))
             actionKey = true;
+
+        speed = playerSpeedPercent * player.moveSpeed;
     }
 
     void FixedUpdate()
