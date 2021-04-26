@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
     [Header("Speed")]
     public AnimationCurve speedCurve;
 
-    public float deathAnimTime = 2f;
-    public bool doOnce;
+    private float deathAnimTime = 2f;
+    private bool doOnce;
 
     private void Awake()
     {
