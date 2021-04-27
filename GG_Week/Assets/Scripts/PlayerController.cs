@@ -141,6 +141,11 @@ public class PlayerController : MonoBehaviour
             isInThisPart = true;
         }
 
+        if (collision.gameObject.CompareTag("DamageZone"))
+        {
+            currentHealth -= 3;
+        }
+
         if (collision.gameObject.CompareTag("DeathZone"))
         {
             currentHealth = 0;

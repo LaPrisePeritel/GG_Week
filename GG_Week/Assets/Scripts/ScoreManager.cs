@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI deathScore;
-    public int score;
+    public TextMeshProUGUI beetleScoreText;
+    private int score;
     public static int highScore;
     private bool newHighScore = false;
+    private int beetleScore;
 
     // Start is called before the first frame update
     void Start()
@@ -22,18 +24,24 @@ public class ScoreManager : MonoBehaviour
             instance = this;
         }
 
-        highScoreText.text = "HighScore " + highScore.ToString() + " meters";
+        highScoreText.text = highScore.ToString() + " meters";
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.text = score.ToString() + " meters";
+        scoreText.text = score.ToString() + " meters";
+        beetleScoreText.text = beetleScore.ToString();
     }
 
     public void ChangeScore(float playerScore)
     {
         score = (int)playerScore;
+    }
+
+    public void BeetleScore()
+    {
+        beetleScore++;
     }
 
     public void DeathScore()
@@ -52,8 +60,5 @@ public class ScoreManager : MonoBehaviour
         {
             deathScore.text = "You've covered " + score.ToString() + " meters";
         }
-
-        
-
     }
 }

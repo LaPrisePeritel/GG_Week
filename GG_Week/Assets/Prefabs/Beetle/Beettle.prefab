@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 7608644438859852225}
   - component: {fileID: 1293976163465213585}
   - component: {fileID: 5782808974508798455}
+  - component: {fileID: 2758459691991877506}
+  - component: {fileID: 2217355904543942736}
   m_Layer: 0
   m_Name: Beettle
-  m_TagString: Untagged
+  m_TagString: Beetle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 2379873830283067665}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2dc0339f5a2143b43bec39be62c402c0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1062669dd276d8149be3d5cf1b8a7332, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -102,3 +104,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &2758459691991877506
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379873830283067665}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.115
+--- !u!114 &2217355904543942736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379873830283067665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0363c5f34c3ed6643bc4cb8c441f3ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beetleTaken: {fileID: 2085561101190129532, guid: 547708d0e5eec3f4c9668d59b644ed7e, type: 3}

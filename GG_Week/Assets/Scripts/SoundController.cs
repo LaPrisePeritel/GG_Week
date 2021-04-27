@@ -11,6 +11,7 @@ public class SoundController : MonoBehaviour
     public AudioClip tombeau;
     public AudioClip platform;
     public AudioClip death;
+    public AudioClip coin;
     void Awake()
     {
         if (Instance != null)
@@ -38,6 +39,11 @@ public class SoundController : MonoBehaviour
     public void MakeDeathSound()
     {
         MakeSound(death);
+    }
+
+    public void MakeCoinSound()
+    {
+        MakeSound(coin);
     }
 
     private void MakeSound(AudioClip originalClip)
