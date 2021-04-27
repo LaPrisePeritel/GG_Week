@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":4.841207027435303,"y":1.139967679977417,"z":-77.81844329833985},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":4.0251898765563969,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":18.112024307250978,"y":1.4395639896392823,"z":-38.675994873046878},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":3.4885358810424806,"orthographic":true}
+>>>>>>> GDLouis
