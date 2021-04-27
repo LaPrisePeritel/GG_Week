@@ -9,6 +9,8 @@ TagManager:
   - MovingPlatform
   - Anubis
   - DeathZone
+  - DamageZone
+  - Beetle
   layers:
   - Default
   - TransparentFX

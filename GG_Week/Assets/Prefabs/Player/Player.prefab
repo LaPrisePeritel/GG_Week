@@ -275,3 +275,4 @@ MonoBehaviour:
   tombeau: {fileID: 0}
   platform: {fileID: 0}
   death: {fileID: 8300000, guid: f6d71238b7e5a0d4e992ff0b34ee29cb, type: 3}
+  coin: {fileID: 8300000, guid: da59ec2034ade454597be4a26e28b7cd, type: 3}
