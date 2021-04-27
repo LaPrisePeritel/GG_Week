@@ -61,6 +61,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1488359795475954978}
   animator: {fileID: 6770415838980216018}
   speedPercent: 0.37
+  SpikesDamage: 3
   currentHealth: 0
   maxHealth: 50
   deathAnim: {fileID: 5401189868208280609, guid: 84aa275860d33ef4789388b513cf6f48, type: 3}
