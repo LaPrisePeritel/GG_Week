@@ -20,6 +20,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Inspector
 =======
     y: 43.2
@@ -28,8 +29,11 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Hierarchy
 >>>>>>> GDLouis
+=======
+  m_Title: Scene
+>>>>>>> Dev
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 521}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -55,12 +59,16 @@ MonoBehaviour:
 <<<<<<< HEAD
     width: 1920
     height: 997
+<<<<<<< HEAD
   m_MinSize: {x: 875, y: 521}
 =======
     width: 1536
     height: 820.8
   m_MinSize: {x: 875, y: 542}
 >>>>>>> GDLouis
+=======
+  m_MinSize: {x: 875, y: 542}
+>>>>>>> Dev
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -144,9 +152,10 @@ MonoBehaviour:
 <<<<<<< HEAD
     width: 1920
     height: 947
-  m_MinSize: {x: 747, y: 471}
-  m_MaxSize: {x: 18003, y: 14021}
+  m_MinSize: {x: 709, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 7536
 =======
     width: 1536
@@ -156,6 +165,9 @@ MonoBehaviour:
   vertical: 0
   controlID: 18251
 >>>>>>> GDLouis
+=======
+  controlID: 29686
+>>>>>>> Dev
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -178,9 +190,10 @@ MonoBehaviour:
 <<<<<<< HEAD
     width: 289
     height: 947
-  m_MinSize: {x: 230, y: 471}
-  m_MaxSize: {x: 10000, y: 14021}
+  m_MinSize: {x: 231, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 7537
 =======
     width: 233.6
@@ -190,6 +203,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 18290
 >>>>>>> GDLouis
+=======
+  controlID: 29742
+>>>>>>> Dev
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -273,11 +289,12 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 289
     y: 0
-    width: 1265
+    width: 1271
     height: 947
-  m_MinSize: {x: 241, y: 442}
+  m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 7460
 =======
     x: 233.6
@@ -289,6 +306,9 @@ MonoBehaviour:
   vertical: 1
   controlID: 18178
 >>>>>>> GDLouis
+=======
+  controlID: 29823
+>>>>>>> Dev
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -307,7 +327,11 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1265
+=======
+    width: 1271
+>>>>>>> Dev
     height: 569
 =======
     width: 1009.6
@@ -333,7 +357,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GridPaintPaletteWindow
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -341,8 +365,9 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
     y: 569
-    width: 1265
+    width: 1271
     height: 378
+<<<<<<< HEAD
 =======
     y: 462.4
     width: 1009.6
@@ -351,17 +376,27 @@ MonoBehaviour:
   m_MinSize: {x: 241, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 22}
+=======
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 19}
+>>>>>>> Dev
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
+<<<<<<< HEAD
   m_Selected: 3
 <<<<<<< HEAD
   m_LastSelected: 0
 =======
   m_LastSelected: 1
 >>>>>>> GDLouis
+=======
+  m_Selected: 0
+  m_LastSelected: 3
+>>>>>>> Dev
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -378,9 +413,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1554
+=======
+    x: 1560
+>>>>>>> Dev
     y: 0
-    width: 366
+    width: 360
     height: 947
 =======
     x: 1243.2
@@ -418,7 +457,11 @@ MonoBehaviour:
     x: 1
     y: 19
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1263
+=======
+    width: 984
+>>>>>>> Dev
     height: 548
 =======
     width: 1007.6
@@ -552,6 +595,7 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 8c7a0000
       m_LastClickedID: 31372
       m_ExpandedIDs: 1cc9ffff3acbffff90cbffff6ae0ffff82f7ffff92f7ffff9ef8ffff303f0000923f0000b83f0000c23f0000747a0000a47a0000
@@ -560,6 +604,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: 9a46ffff6a4bffffc059ffff9a5fffff7664ffff8c6affffcc76ffffb087ffff8a8cffffcc96ffff90a1ffff02abffffe2b4ffffacbcffff0cdeffffeee4ffff7ae6ffffe4e8ffffa4e9ffff64eaffffd2ebffff92ecffff52edffffd0eeffffa2efffff4af2ffff06580000
 >>>>>>> GDLouis
+=======
+      m_SelectedIDs: f49f0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 16f8ffffb4faffffc24e0000ec4e0000064f0000884f0000924f0000a44f0000
+>>>>>>> Dev
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -626,8 +675,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 1
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Scenes
+    m_Folders: []
     m_Globs: []
   m_ViewMode: 0
   m_StartGridSize: 64
@@ -641,10 +689,14 @@ MonoBehaviour:
     m_SelectedIDs: 7e410000
     m_LastClickedID: 16766
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: ffffffff00000000c43c00000e3d0000423d0000d63d0000183e00001a3e00001c3e00001e3e00000a480000a04900007e4b0000844b0000d44b0000d64b0000f24b0000044c0000724c0000744c0000764c0000784c00007a4c00007c4c0000804c0000824c0000844c0000864c0000884c00008a4c00008c4c00008e4c0000904c0000924c0000964c0000984c00009a4c00009c4c00009e4c0000a04c0000a24c0000f64c00000a590000
 =======
     m_ExpandedIDs: ffffffff00000000663d0000743d00009a400000b6400000d24a0000e24c0000c24d0000c64d0000ca4d0000cc4d0000d24d0000d44d0000d64d0000d84d0000da4d0000dc4d0000de4d0000e04d0000e24d0000e44d0000e64d0000e84d0000ea4d0000ec4d0000ee4d0000f04d0000f24d0000f44d0000184e00001c4e00001e4e0000
 >>>>>>> GDLouis
+=======
+    m_ExpandedIDs: ffffffff00000000fa3c0000f4460000284700002c4700002e4700003047000088480000664a00006c4a0000a84a0000d64a0000d84a0000da4a0000004b0000124b00009a4b00009c4b00009e4b0000a24b0000a44b0000a64b0000a84b0000aa4b0000ac4b0000ae4b0000b24b0000b44b0000b64b0000b84b0000ba4b0000be4b0000c64b0000ca4b0000cc4b0000064c000096610000b6770000
+>>>>>>> Dev
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -670,6 +722,7 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 517}
     m_SelectedIDs: 
     m_LastClickedID: 0
@@ -680,6 +733,12 @@ MonoBehaviour:
     m_LastClickedID: 0
     m_ExpandedIDs: ffffffff00000000663d0000743d00009a400000b6400000d24a0000e24c0000c24d0000c64d0000ca4d0000cc4d0000d24d0000d44d0000d64d0000d84d0000da4d0000dc4d0000de4d0000e04d0000e24d0000e44d0000e64d0000e84d0000ea4d0000ec4d0000ee4d0000f04d0000f24d0000f44d0000184e00001c4e00001e4e0000
 >>>>>>> GDLouis
+=======
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff00000000fa3c0000f4460000284700002c4700002e4700003047000088480000664a00006c4a0000a84a0000d64a0000d84a0000da4a0000004b0000124b00009a4b00009c4b0000a84b0000aa4b0000ae4b0000b24b0000b44b0000b64b0000b84b0000ba4b0000be4b0000c64b0000ca4b0000cc4b0000064c000096610000b6770000
+>>>>>>> Dev
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -758,7 +817,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 289
     y: 73
-    width: 1263
+    width: 1269
     height: 548
 =======
     x: 233.6
@@ -779,6 +838,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 4.841207, y: 1.1399677, z: -77.81844}
     speed: 2
     m_Value: {x: 4.841207, y: 1.1399677, z: -77.81844}
@@ -787,6 +847,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 18.174633, y: 1.4650822, z: -38.662846}
 >>>>>>> GDLouis
+=======
+    m_Target: {x: 6.726827, y: 2.4296188, z: -40.26133}
+    speed: 2
+    m_Value: {x: 6.726827, y: 2.4296188, z: -40.26133}
+>>>>>>> Dev
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -838,6 +903,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 4.02519
     speed: 2
     m_Value: 4.02519
@@ -846,6 +912,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 3.6529171
 >>>>>>> GDLouis
+=======
+    m_Target: 6.7032623
+    speed: 2
+    m_Value: 6.7032623
+>>>>>>> Dev
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -944,7 +1015,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 289
     y: 642
-    width: 1263
+    width: 1269
     height: 357
 =======
     x: 233.6
@@ -1163,10 +1234,14 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastSelectedObjectID: -2260
 =======
   m_LastSelectedObjectID: -35128
 >>>>>>> GDLouis
+=======
+  m_LastSelectedObjectID: 20388
+>>>>>>> Dev
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1190,7 +1265,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 289
     y: 642
-    width: 1263
+    width: 984
     height: 357
 =======
     x: 233.6
@@ -1226,9 +1301,13 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1554
+=======
+    x: 1560
+>>>>>>> Dev
     y: 73
-    width: 365
+    width: 359
     height: 926
 =======
     x: 1243.2001
