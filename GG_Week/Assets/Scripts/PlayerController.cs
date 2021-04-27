@@ -130,10 +130,16 @@ public class PlayerController : MonoBehaviour
         rb.velocity = velocity;
 
         if (isInThisPart && upKey)
+        {
             levelPart.transform.position += partMovementUp * (speedPercent * moveSpeed) * Time.deltaTime;
+            MovingPlatform.Instance.Particle();
+        }
 
         if (isInThisPart && downKey)
+        {
             levelPart.transform.position += partMovementDown * (speedPercent * moveSpeed) * Time.deltaTime;
+            MovingPlatform.Instance.Particle();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
