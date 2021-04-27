@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelGenerator : MonoBehaviour
 {
 
-    private const float PLAYER_DISTANCE_SPAWN_LEVEL_PART = 50f;
+    private const float PLAYER_DISTANCE_SPAWN_LEVEL_PART = 40f;
 
     [SerializeField] private Transform levelPart_Start;
     [SerializeField] private List<Transform> levelParts;
@@ -43,7 +43,7 @@ public class LevelGenerator : MonoBehaviour
     {
         Transform levelPartTransform = Instantiate(levelPart, spawnPosition, Quaternion.identity);
         levelSpawned.Add(levelPartTransform);
-        if (levelSpawned.Count > 7)
+        if (levelSpawned.Count > 9)
         {
             Destroy(levelSpawned[0].gameObject);
             levelSpawned.RemoveAt(0);

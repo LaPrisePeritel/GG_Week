@@ -63,6 +63,15 @@ public class PlayerController : MonoBehaviour
     {
         // Animator
         animator.SetFloat("Speed", rb.velocity.sqrMagnitude);
+        if (rb.velocity.y < -0.5)
+        {
+            animator.SetBool("isFalling", true);
+        }
+        else
+        {
+            animator.SetBool("isFalling", false);
+        }
+        
 
         // Input
         if (Input.GetKey(KeyCode.DownArrow))
