@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     Vector3 startPoint;
     public float speedPercent;
 
+    [Header("Trap")]
+    public int SpikesDamage;
+
     [Header("Player Life")]
     public int currentHealth;
     public int maxHealth = 50;
@@ -63,7 +66,7 @@ public class PlayerController : MonoBehaviour
     {
         // Animator
         animator.SetFloat("Speed", rb.velocity.sqrMagnitude);
-        if (rb.velocity.y < -0.5)
+        if (rb.velocity.y < -1)
         {
             animator.SetBool("isFalling", true);
         }
@@ -143,7 +146,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("DamageZone"))
         {
-            currentHealth -= 3;
+            currentHealth -= SpikesDamage;
         }
 
         if (collision.gameObject.CompareTag("DeathZone"))

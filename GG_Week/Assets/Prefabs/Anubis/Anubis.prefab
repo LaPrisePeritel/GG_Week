@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: 42d205d0b4fc7524bb8d76cc2b1f6292, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   playerController: {fileID: 0}
   animator: {fileID: 939976719588452807}
   anubisMoveSpeed: 2
-  anubisDamage: 5
+  anubisDamage: 10
   playerSpeedPercent: 0.9
   timeBetweenAttack: 1
 --- !u!58 &4443502431679271240
