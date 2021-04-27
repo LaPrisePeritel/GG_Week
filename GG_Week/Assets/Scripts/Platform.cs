@@ -13,14 +13,16 @@ public class Platform : MonoBehaviour
     
     [Range(0f, 1f)]
     public float playerSpeedPercent;
-    
+
+    public int destinationX;
+    public int destinationY;
 
     private Vector3 pos1, pos2;
 
     void Start()
     {
         pos1 = transform.position;
-        pos2 = new Vector3(pos1.x + 4, 0, 0);
+        pos2 = new Vector3(pos1.x + destinationX, destinationY, 0);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 

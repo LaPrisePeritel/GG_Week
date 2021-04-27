@@ -63,7 +63,7 @@ MonoBehaviour:
   speedPercent: 0.37
   currentHealth: 0
   maxHealth: 50
-  deathAnim: {fileID: 7666098894873025222, guid: 84aa275860d33ef4789388b513cf6f48, type: 3}
+  deathAnim: {fileID: 5401189868208280609, guid: 84aa275860d33ef4789388b513cf6f48, type: 3}
   healthBar: {fileID: 0}
   speedCurve:
     serializedVersion: 2
@@ -152,8 +152,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  deathAnimTime: 2
-  doOnce: 0
 --- !u!212 &1488359795475954978
 SpriteRenderer:
   m_ObjectHideFlags: 0
