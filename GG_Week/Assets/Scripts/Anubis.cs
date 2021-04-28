@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
+
 
 public class Anubis : MonoBehaviour
 {
+    public PostProcessing postProcessing;
+    private Vignette vignette;
     public GameObject player;
     public PlayerController playerController;
     private Vector3 playerPos;
@@ -24,7 +28,7 @@ public class Anubis : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        vignette = postProcessing.volume.profile.GetSetting<Vignette>();
     }
 
     // Update is called once per frame
@@ -39,9 +43,15 @@ public class Anubis : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, playerPos, anubisMoveSpeed * Time.deltaTime);
 
         if (!GetComponent<Renderer>().isVisible)
+        {
             anubisMoveSpeed = playerController.moveSpeed;
+            vignette.intensity.value = 0f;
+        }
         else
+        {
             anubisMoveSpeed = playerSpeedPercent * playerController.moveSpeed;
+            vignette.intensity.value = 0.25f;
+        }
 
         if (detectionDelay)
         {
