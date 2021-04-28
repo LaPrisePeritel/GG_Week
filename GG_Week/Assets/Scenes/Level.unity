@@ -5373,6 +5373,10 @@ MonoBehaviour:
   - {fileID: 7163858652766926932, guid: 7c78d5c36de17c7459e72f062150366c, type: 3}
   - {fileID: 6525977319941537026, guid: cd70519eacdf88c4fa0201c44954563b, type: 3}
   - {fileID: 8532439174884692281, guid: 2cb7c2bbc480ffe40b43871eb120c218, type: 3}
+  - {fileID: 5220297038250207911, guid: d3c0e5227388d0f469e6fb027c7245d3, type: 3}
+  - {fileID: 4315940199947295082, guid: d1c0f94673b10a643b3868c0d7b03092, type: 3}
+  - {fileID: 3654751042660387579, guid: 9f3cc8f5b03d0fb41929687b6132c7ee, type: 3}
+  - {fileID: 4993632230849806232, guid: db60142ccf2c58d4391812c62a1dc63f, type: 3}
   player: {fileID: 1767092627}
   levelSpawned: []
 --- !u!4 &505114219
@@ -7880,7 +7884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4068995274314359102, guid: 591191ea73c4b0f439834281e05ec23c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.1
+      value: -3.62
       objectReference: {fileID: 0}
     - target: {fileID: 4068995274314359102, guid: 591191ea73c4b0f439834281e05ec23c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7912,7 +7916,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1639376809850020135, guid: 6b04723417cb01a4e810eada7e6e95e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.52
+      value: -7.36
       objectReference: {fileID: 0}
     - target: {fileID: 1639376809850020135, guid: 6b04723417cb01a4e810eada7e6e95e6, type: 3}
       propertyPath: m_LocalPosition.y
