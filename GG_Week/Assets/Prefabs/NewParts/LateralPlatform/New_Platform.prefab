@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &468615608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468615609}
+  - component: {fileID: 468615610}
+  m_Layer: 0
+  m_Name: DeathZone
+  m_TagString: DeathZone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &468615609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468615608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 158733472109514600}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &468615610
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468615608}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -4.12}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 15, y: 3}
+  m_EdgeRadius: 0
 --- !u!1 &5242825521650671071
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +116,7 @@ Tilemap:
       - {fileID: 4050683151735570013, guid: 826f41f12e759f94d80c7bc7fa9896dc, type: 3}
       - {fileID: -8882730645733750793, guid: 826f41f12e759f94d80c7bc7fa9896dc, type: 3}
       - {fileID: 8162595524305069605, guid: 826f41f12e759f94d80c7bc7fa9896dc, type: 3}
-      m_AnimationSpeed: 20.000002
+      m_AnimationSpeed: 8
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -82,7 +139,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 1a967b2e872ff5c4ca77ddcbd5e40800, type: 2}
+    m_Data: {fileID: 11400000, guid: 21e6124b62d373c479df29b29393b0ca, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -244,6 +301,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7333563077308517074}
+  - {fileID: 468615609}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -265,7 +323,7 @@ Tilemap:
       m_TileColorIndex: 16
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
-      m_AllTileFlags: 2147483648
+      m_AllTileFlags: 0
   m_AnimatedTiles:
   - first: {x: -1, y: -1, z: 0}
     second:
@@ -278,7 +336,7 @@ Tilemap:
       - {fileID: -748571599579807842, guid: 5b6698d755f1aef4b91f0ac95ac61c76, type: 3}
       - {fileID: 6488737935290109652, guid: 5b6698d755f1aef4b91f0ac95ac61c76, type: 3}
       - {fileID: -7018169752680033044, guid: 5b6698d755f1aef4b91f0ac95ac61c76, type: 3}
-      m_AnimationSpeed: 75
+      m_AnimationSpeed: 18
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -529,6 +587,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionKey: 0
   player: {fileID: 0}
-  playerSpeedPercent: 0
-  destinationX: 0
-  destinationY: 0
+  playerSpeedPercent: 0.255
+  destinationX: 2
+  destinationY: 1

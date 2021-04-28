@@ -22,7 +22,7 @@ public class Platform : MonoBehaviour
     void Start()
     {
         pos1 = transform.position;
-        pos2 = new Vector3(pos1.x + destinationX, destinationY, 0);
+        pos2 = new Vector3(pos1.x + destinationX, pos1.y + destinationY, 0);
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 

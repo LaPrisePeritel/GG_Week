@@ -73,7 +73,7 @@
       "dependencies": {}
     },
     "com.unity.2d.tilemap.extras": {
-      "version": "file:com.unity.2d.tilemap.extras",
+      "version": "file:com.unity.2.tilemap.extras",
       "depth": 0,
       "source": "embedded",
       "dependencies": {

@@ -70,7 +70,6 @@ public class Anubis : MonoBehaviour
         {
             if (!detectionDelay)
             {
-                Debug.Log("Attack start" + Time.frameCount);
                 attackCoroutine = StartCoroutine(AttackCoroutine());
             } 
         }
@@ -81,7 +80,6 @@ public class Anubis : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             detectionDelay = true;
-            Debug.Log("Attack stop" + Time.frameCount);
             StopCoroutine(attackCoroutine);
             detectionTimer = 0.1f;
         }

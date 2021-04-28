@@ -8,10 +8,9 @@ public class SoundController : MonoBehaviour
 
 
     public AudioClip footstep;
-    public AudioClip tombeau;
-    public AudioClip platform;
     public AudioClip death;
     public AudioClip coin;
+    public AudioClip defeat;
     void Awake()
     {
         if (Instance != null)
@@ -26,16 +25,6 @@ public class SoundController : MonoBehaviour
         MakeSound(footstep);
     }
 
-    public void MakeTombeauSound()
-    {
-        MakeSound(tombeau);
-    }
-
-    public void MakePlatformSound()
-    {
-        MakeSound(platform);
-    }
-
     public void MakeDeathSound()
     {
         MakeSound(death);
@@ -44,6 +33,11 @@ public class SoundController : MonoBehaviour
     public void MakeCoinSound()
     {
         MakeSound(coin);
+    }
+    
+    public void MakeDefeatSound()
+    {
+        MakeSound(defeat);
     }
 
     private void MakeSound(AudioClip originalClip)
