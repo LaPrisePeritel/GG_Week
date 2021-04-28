@@ -50,8 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInThisPart: 0
   levelPart: {fileID: 0}
-  movingSpeedUp: 1
-  movingSpeedDown: 1
+  audioSource: {fileID: 0}
   downKey: 0
   upKey: 0
   panelHUD: {fileID: 0}
@@ -273,7 +272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footstep: {fileID: 8300000, guid: e4938f170241cae4887ed6fc56657554, type: 3}
-  tombeau: {fileID: 0}
-  platform: {fileID: 0}
   death: {fileID: 8300000, guid: f6d71238b7e5a0d4e992ff0b34ee29cb, type: 3}
   coin: {fileID: 8300000, guid: da59ec2034ade454597be4a26e28b7cd, type: 3}
+  defeat: {fileID: 8300000, guid: 421a8139b8bf08d46affcb871eb46ffe, type: 3}

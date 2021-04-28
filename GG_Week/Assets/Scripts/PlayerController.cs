@@ -11,8 +11,10 @@ public class PlayerController : MonoBehaviour
     public GameObject levelPart;
     private Vector3 partMovementUp;
     private Vector3 partMovementDown;
-    public float movingSpeedUp = 1;
-    public float movingSpeedDown = 1;
+    private MovingPlatform movingPlatformScript;
+
+    [Header("Musique")]
+    public AudioSource audioSource;
 
     [Header("Keys")]
     public bool downKey = false;
@@ -112,6 +114,8 @@ public class PlayerController : MonoBehaviour
                 Destroy(gameObject);
                 panelHUD.SetActive(false);
                 panelDef.SetActive(true);
+                audioSource.Stop();
+                SoundController.Instance.MakeDefeatSound();
             }
             
         }
@@ -132,13 +136,13 @@ public class PlayerController : MonoBehaviour
         if (isInThisPart && upKey)
         {
             levelPart.transform.position += partMovementUp * (speedPercent * moveSpeed) * Time.deltaTime;
-            MovingPlatform.Instance.Particle();
+            movingPlatformScript.Particle();
         }
 
         if (isInThisPart && downKey)
         {
             levelPart.transform.position += partMovementDown * (speedPercent * moveSpeed) * Time.deltaTime;
-            MovingPlatform.Instance.Particle();
+            movingPlatformScript.Particle();
         }
     }
 
@@ -147,6 +151,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("LevelPart"))
         {
             levelPart = collision.gameObject;
+            movingPlatformScript = levelPart.GetComponent<MovingPlatform>();
             isInThisPart = true;
         }
 
